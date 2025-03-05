@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amresh's GitHub Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <!-- Add Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 font-inter">
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle" class="fixed bottom-4 right-4 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors">
+        <i id="darkModeIcon" class="fas fa-moon"></i>
+    </button>
+
+    <!-- Header Section with Glassmorphism -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="backdrop-blur-md bg-white/10 p-8 rounded-lg inline-block">
+            <h1 id="welcomeText" class="text-6xl font-bold mb-4">Welcome to Amresh's GitHub Page</h1>
+            <p id="tagline" class="text-xl opacity-0">Developer | Cloud Enthusiast | Tech Blogger</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- About Me Section with Glassmorphism -->
+        <section class="mb-12 backdrop-blur-md bg-white/50 dark:bg-gray-800/50 p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-blue-600">About Me</h2>
+            <p class="text-lg leading-relaxed">Hello! I’m Amresh, a cloud enthusiast and developer with 3+ years of experience in data processing and AWS solutions. Welcome to my GitHub, where I showcase my projects, skills, and passion for building scalable, secure systems. Let’s innovate and create something amazing together!</p>
+        </section>
+
+        <!-- Projects Section with Glassmorphism -->
+        <section class="mb-12 backdrop-blur-md bg-white/50 dark:bg-gray-800/50 p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-blue-600">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- HTML Project 1 -->
+                <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
+                    <h3 class="text-xl font-semibold mb-2">HTML Login Page Project</h3>
+                    <p class="text-lg mb-4 flex-grow">A responsive website built using HTML and CSS, showcasing modern web design principles and clean code structure.</p>
+                    <a href="https://github.com/Amreshbofficial/HTM-Project-1" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
+                        View Project <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Python AI Projects -->
+                <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
+                    <h3 class="text-xl font-semibold mb-2">Python AI Projects</h3>
+                    <p class="text-lg mb-4 flex-grow">A collection of AI-based projects using Python, including machine learning models and data analysis tools.</p>
+                    <a href="https://github.com/Amreshbofficial/Python---Ai-Projects" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
+                        View Project <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Python Django Project: Pin Your Notes -->
+                <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
+                    <h3 class="text-xl font-semibold mb-2">Python Django Project: Pin Your Notes</h3>
+                    <p class="text-lg mb-4 flex-grow">A full-stack web application built with Django for managing and organizing notes efficiently.</p>
+                    <a href="https://github.com/Amreshbofficial/Python-Django-Project-Pin-Your-Notes" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
+                        View Project <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Appointment System Project -->
+                <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
+                    <h3 class="text-xl font-semibold mb-2">Appointment System Project</h3>
+                    <p class="text-lg mb-4 flex-grow">A Django-based appointment scheduling system designed to streamline booking and management processes.</p>
+                    <a href="https://github.com/Amreshbofficial/Appointment_System_Project" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
+                        View Project <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Todo List App (React Mini Project) -->
+                <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
+                    <h3 class="text-xl font-semibold mb-2">Todo List App (React Mini Project)</h3>
+                    <p class="text-lg mb-4 flex-grow">A React-based to-do list application with features like task creation, editing, and deletion.</p>
+                    <a href="https://github.com/Amreshbofficial/Todo-list-app-React-Mini-Project" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
+                        View Project <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 text-center">
+        <p>&copy; 2025 Amresh. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

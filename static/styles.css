@@ -1,0 +1,30 @@
+/* Glassmorphism Effect */
+.backdrop-blur-md {
+    backdrop-filter: blur(10px);
+}
+
+.bg-white-50 {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-gray-800-50 {
+    background-color: rgba(31, 41, 55, 0.5);
+}
+
+/* Font Clarity */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 400;
+    color: #374151; /* Dark gray for better readability */
+}
+
+.dark p {
+    color: #e5e7eb; /* Light gray for dark mode */
+}
