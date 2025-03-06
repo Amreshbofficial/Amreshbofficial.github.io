@@ -26,8 +26,8 @@ jobs:
 
       - name: Commit and push sitemap
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "Amreshbofficial"
+          git config --global user.email "amreshbaskar@gmail.com"
           git add sitemap.xml
           git commit -m "Automated sitemap update"
           git push origin main

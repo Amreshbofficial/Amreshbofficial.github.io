@@ -1,39 +1,22 @@
-// GSAP Animations
-gsap.from("#welcomeText", {
-    duration: 1.5,
-    y: -50,
-    opacity: 0,
-    ease: "power3.out",
-});
+document.addEventListener('DOMContentLoaded', function() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    const welcomeText = document.getElementById('welcomeText');
+    const tagline = document.getElementById('tagline');
 
-gsap.to("#tagline", {
-    duration: 1.5,
-    opacity: 1,
-    delay: 1,
-    ease: "power3.out",
-});
+    // Dark mode toggle functionality
+    darkModeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark');
+        if (document.body.classList.contains('dark')) {
+            darkModeIcon.classList.remove('fa-moon');
+            darkModeIcon.classList.add('fa-sun');
+        } else {
+            darkModeIcon.classList.remove('fa-sun');
+            darkModeIcon.classList.add('fa-moon');
+        }
+    });
 
-// Dark Mode Toggle
-const darkModeToggle = document.getElementById('darkModeToggle');
-const darkModeIcon = document.getElementById('darkModeIcon');
-const body = document.body;
-
-// Check for saved dark mode preference
-if (localStorage.getItem('darkMode') === 'true') {
-    body.classList.add('dark');
-    darkModeIcon.classList.replace('fa-moon', 'fa-sun');
-}
-
-// Toggle Dark Mode
-darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark');
-    const isDarkMode = body.classList.contains('dark');
-    localStorage.setItem('darkMode', isDarkMode);
-
-    // Change icon
-    if (isDarkMode) {
-        darkModeIcon.classList.replace('fa-moon', 'fa-sun');
-    } else {
-        darkModeIcon.classList.replace('fa-sun', 'fa-moon');
-    }
+    // GSAP animations
+    gsap.from(welcomeText, { duration: 1, x: -100, opacity: 0 });
+    gsap.to(tagline, { duration: 1, y: 20, opacity: 1, delay: 1 });
 });
