@@ -21,10 +21,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 font-inter">
-    <!-- Dark Mode Toggle Button -->
-    <button id="darkModeToggle" aria-label="Toggle dark mode" class="fixed bottom-4 right-4 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors">
-        <i id="darkModeIcon" class="fas fa-moon"></i>
-    </button>
+   
+
+    <!-- Profile Picture on Top Right -->
+    <div class="fixed top-4 right-4 z-50">
+        <div class="relative w-16 h-16 rounded-full overflow-hidden shadow-lg ring-2 ring-white ring-opacity-50 hover:ring-4 hover:ring-opacity-75 transition-all">
+            <img src="https://avatars.githubusercontent.com/u/164850230?v=4/150" alt="Amresh's Profile Picture" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-white bg-opacity-20 backdrop-blur-sm"></div>
+        </div>
+    </div>
 
     <!-- Header Section with Glassmorphism -->
     <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 text-center relative overflow-hidden">
@@ -93,6 +98,26 @@
                 </div>
             </div>
         </section>
+
+        <!-- Contact Us Section -->
+        <section class="mb-12 bg-white/70 dark:bg-gray-800/70 p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-blue-600">Contact Us</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name" class="block text-lg font-medium">Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-lg font-medium">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-lg font-medium">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600" required></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Send Message</button>
+            </form>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -102,20 +127,6 @@
 
     <!-- Replace with your actual JS file path -->
     <script src="script.js"></script>
-
-    <!-- Dark Mode Toggle Script -->
-    <script>
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const darkModeIcon = document.getElementById('darkModeIcon');
-        const body = document.body;
-
-        darkModeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark');
-            const isDarkMode = body.classList.contains('dark');
-            darkModeIcon.classList.toggle('fa-sun', isDarkMode);
-            darkModeIcon.classList.toggle('fa-moon', !isDarkMode);
-        });
-    </script>
 
     <!-- GSAP Animation for Tagline -->
     <script>
