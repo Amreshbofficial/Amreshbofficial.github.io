@@ -49,60 +49,8 @@
         <!-- Projects Section -->
         <section class="mb-12 bg-white/70 dark:bg-gray-800/70 p-8 rounded-lg shadow-lg">
             <h2 class="text-3xl font-bold mb-6 text-blue-600">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Appointment System Project -->
-                <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold mb-2">Appointment System Project</h3>
-                    <p class="text-lg mb-4 flex-grow">A Django-based appointment scheduling system designed to streamline booking and management processes.</p>
-                    <a href="https://github.com/Amreshbofficial/Appointment_System_Project" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
-                        View Project <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- HTML Project 1 -->
-                <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold mb-2">HTML Login Page Project</h3>
-                    <p class="text-lg mb-4 flex-grow">A responsive website built using HTML and CSS, showcasing modern web design principles and clean code structure.</p>
-                    <a href="https://github.com/Amreshbofficial/HTM-Project-1" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
-                        View Project <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Python AI Projects -->
-                <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold mb-2">Python AI Projects</h3>
-                    <p class="text-lg mb-4 flex-grow">A collection of AI-based projects using Python, including machine learning models and data analysis tools.</p>
-                    <a href="https://github.com/Amreshbofficial/Python---Ai-Projects" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
-                        View Project <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Python Django Project: Pin Your Notes -->
-                <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold mb-2">Python Django Project: Pin Your Notes</h3>
-                    <p class="text-lg mb-4 flex-grow">A full-stack web application built with Django for managing and organizing notes efficiently.</p>
-                    <a href="https://github.com/Amreshbofficial/Python-Django-Project-Pin-Your-Notes" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
-                        View Project <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Todo List App (React Mini Project) -->
-                <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold mb-2">Todo List App (React Mini Project)</h3>
-                    <p class="text-lg mb-4 flex-grow">A React-based to-do list application with features like task creation, editing, and deletion.</p>
-                    <a href="https://github.com/Amreshbofficial/Todo-list-app-React-Mini-Project" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
-                        View Project <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Simple-Calculator-Python-Project -->
-                <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold mb-2">Simple Calculator Python Project</h3>
-                    <p class="text-lg mb-4 flex-grow">This is a simple calculator program written in Python that performs basic arithmetic operations: addition, subtraction, multiplication, and division.</p>
-                    <a href="https://github.com/Amreshbofficial/Simple-Calculator-Python-Project" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
-                        View Project <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Projects will be dynamically inserted here -->
             </div>
         </section>
 
@@ -132,8 +80,72 @@
         <p>&copy; 2025 Amresh. All rights reserved.</p>
     </footer>
 
-    <!-- Replace with your actual JS file path -->
-    <script src="script.js"></script>
+    <!-- JavaScript for Dynamic Project Sorting -->
+    <script>
+        // Array of projects (add new projects here)
+        const projects = [
+            {
+                name: "Appointment System Project",
+                description: "A Django-based appointment scheduling system designed to streamline booking and management processes.",
+                link: "https://github.com/Amreshbofficial/Appointment_System_Project"
+            },
+            {
+                name: "Number Guessing Game",
+                description: "A Python-based game where the user guesses a randomly generated number. Built with simplicity and fun in mind!",
+                link: "https://github.com/Amreshbofficial/Number-Guessing-Game-Python-Projects"
+            },
+            {
+                name: "HTML Login Page Project",
+                description: "A responsive website built using HTML and CSS, showcasing modern web design principles and clean code structure.",
+                link: "https://github.com/Amreshbofficial/HTM-Project-1"
+            },
+            {
+                name: "Python AI Projects",
+                description: "A collection of AI-based projects using Python, including machine learning models and data analysis tools.",
+                link: "https://github.com/Amreshbofficial/Python---Ai-Projects"
+            },
+            {
+                name: "Python Django Project: Pin Your Notes",
+                description: "A full-stack web application built with Django for managing and organizing notes efficiently.",
+                link: "https://github.com/Amreshbofficial/Python-Django-Project-Pin-Your-Notes"
+            },
+            {
+                name: "Todo List App (React Mini Project)",
+                description: "A React-based to-do list application with features like task creation, editing, and deletion.",
+                link: "https://github.com/Amreshbofficial/Todo-list-app-React-Mini-Project"
+            },
+            {
+                name: "Simple Calculator Python Project",
+                description: "This is a simple calculator program written in Python that performs basic arithmetic operations: addition, subtraction, multiplication, and division.",
+                link: "https://github.com/Amreshbofficial/Simple-Calculator-Python-Project"
+            }
+        ];
+
+        // Sort projects alphabetically by name
+        projects.sort((a, b) => a.name.localeCompare(b.name));
+
+        // Function to render projects
+        function renderProjects() {
+            const container = document.getElementById("projects-container");
+            container.innerHTML = ""; // Clear existing content
+
+            projects.forEach(project => {
+                const projectCard = `
+                    <div class="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col">
+                        <h3 class="text-xl font-semibold mb-2">${project.name}</h3>
+                        <p class="text-lg mb-4 flex-grow">${project.description}</p>
+                        <a href="${project.link}" target="_blank" class="text-blue-500 hover:text-blue-700 flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                `;
+                container.insertAdjacentHTML("beforeend", projectCard);
+            });
+        }
+
+        // Render projects on page load
+        document.addEventListener("DOMContentLoaded", renderProjects);
+    </script>
 
     <!-- GSAP Animation for Tagline -->
     <script>
