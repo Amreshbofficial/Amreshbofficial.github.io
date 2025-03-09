@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="google-site-verification" content="googlebc21a09e7972c169" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | Personal Portfolio Page</title>
+    <style>
+      /* Add this CSS to ensure left alignment of the paragraph */
+      .header__container p {
+        text-align: left; /* Align text to the left */
+        max-width: 600px; /* Limit the width for better readability */
+        margin: 0; /* Remove default margin */
+        line-height: 1.6; /* Improve line spacing */
+      }
+
+      /* Additional styles for project cards */
+      .project__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .project__card {
+        background: white; /* White background for project cards */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative; /* Required for positioning the "View Project" link */
+      }
+
+      .project__card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .project__card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #ff4e05; /* Orange color for project headings */
+      }
+
+      .project__card p {
+        font-size: 1rem;
+        color: #555; /* Gray color for project descriptions */
+        margin-bottom: 40px; /* Add space below the description for the "View Project" link */
+      }
+
+      .project__card a {
+        color: #55bad6; /* Light blue color for "View Project" links */
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        position: absolute; /* Position the link absolutely within the card */
+        bottom: 20px; /* Position it at the bottom */
+        right: 20px; /* Position it at the right */
+      }
+
+      .project__card a:hover {
+        text-decoration: underline;
+      }
+
+      .project__card i {
+        margin-left: 5px;
+      }
+
+      /* Portfolio section background */
+      .project {
+        background: #0d1319; /* Dark background for the entire portfolio section */
+        padding: 40px 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header>
+      <div class="section__container header__container">
+        <p><span>Hello</span> I'm</p>
+        <br />
+        <h1>Amresh B</h1>
+        <h2 class="section__title" style="font-size: 1.5em">
+          Developer | Cloud Enthusiast | Blogger | <span>Designer.</span>
+        </h2>
+        <br />
+        <p>
+          I’m a skilled professional with expertise in website creation, design,
+          and cloud computing. I specialize in building secure, scalable
+          solutions using AWS services, cloud architecture, and DevOps, while
+          also creating visually appealing websites with tools like WordPress and
+          SEO optimization. Explore my projects and contributions, and feel free
+          to reach out—let’s collaborate and create something amazing!
+        </p>
+        <br />
+        <div class="action__btns">
+          <a href="https://wa.me/918072799323" class="btn" target="_blank">Say Hello</a>
+          <!-- Removed the "Watch My Video" button and icon -->
+        </div>
+      </div>
+    </header>
+    <section class="about">
+      <div class="section__container about__container">
+        <div class="about__image">
+          <img src="assets/about-bg.png" alt="about" />
+        </div>
+        <div class="about__content">
+          <h2 class="section__title">About <span>Me</span></h2>
+          <p class="about__details">
+            Hello! I’m Amresh, a cloud enthusiast and developer with 3+ years of
+            experience in data processing and AWS solutions. Welcome to my GitHub,
+            where I showcase my projects, skills, and passion for building
+            scalable, secure systems. Let’s innovate and create something amazing
+            together!
+          </p>
+          <!-- Removed the "More About" button -->
+        </div>
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="section__container service__container">
+        <p class="section__subtitle">What I Offer!</p>
+        <h2 class="section__title"><span>My</span> Services</h2>
+        <div class="service__grid">
+          <div class="service__card">
+            <i class="ri-smartphone-line"></i>
+            <h4>Web Design</h4>
+            <p>
+              I create visually stunning, user-friendly websites that are tailored
+              to your brand and business goals. From responsive layouts to
+              intuitive navigation, I ensure your website not only looks great but
+              also delivers an exceptional user experience.
+            </p>
+            <a href="#" class="read__more">Read more...</a>
+          </div>
+          <div class="service__card">
+            <i class="ri-code-s-slash-line"></i>
+            <h4>Web Development</h4>
+            <p>
+              I build fast, secure, and scalable websites using the latest
+              technologies like HTML5, CSS3, JavaScript, and modern frameworks.
+              Whether it's a simple landing page or a complex web application, I
+              deliver robust solutions that perform seamlessly across all
+              devices.
+            </p>
+            <a href="#" class="read__more">Read more...</a>
+          </div>
+          <div class="service__card">
+            <i class="ri-cloud-line"></i>
+            <h4>Cloud Solutions</h4>
+            <p>
+              I specialize in designing secure, scalable, and cost-effective
+              cloud solutions using AWS services. My approach is collaborative,
+              and I work closely with clients to ensure their cloud
+              infrastructure meets their business needs and expectations.
+            </p>
+            <a href="#" class="read__more">Read more...</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="section__container project__container">
+        <p class="section__subtitle">Portfolio</p>
+        <h2 class="section__title"><span>Latest</span> Project</h2>
+        <div id="projects-container" class="project__grid">
+          <!-- Projects will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__content">
+          <h2 class="section__title">Contact <span>Me!</span></h2>
+          <p class="section__subtitle">If you have any project in your mind</p>
+          <div class="footer__details">
+            <p>
+              You can reach me through the contact form provided on this website.
+              Simply fill out the form with your name, email address, and
+              message, and I will get back to you as soon as possible.
+            </p>
+            <p>Pearl Information Technology Pvt Ltd - (Startup)</p>
+            <p>1/183, Valacherykkadu, Thiruchitrambalam East,</p>
+            <p> Pattukkottai Taluk, Thanjavur – 614628</p>
+          </div>
+          <div class="social__icons">
+            <a href="#" class="icon"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="icon"><i class="ri-mail-line"></i></a>
+            <a href="#" class="icon"><i class="ri-twitter-fill"></i></a>
+            <a href="#" class="icon"><i class="ri-linkedin-fill"></i></a>
+          </div>
+        </div>
+        <form class="footer__form">
+          <input type="text" placeholder="Your Name" />
+          <input type="text" placeholder="Your Email Address" />
+          <input type="text" placeholder="Your Phone Number" />
+          <textarea cols="30" rows="10" placeholder="Your Idea"></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </footer>
+
+    <script>
+      // Array of projects (add new projects here)
+      const projects = [
+        {
+          name: "Appointment System Project",
+          description:
+            "A Django-based appointment scheduling system designed to streamline booking and management processes.",
+          link: "https://github.com/Amreshbofficial/Appointment_System_Project",
+        },
+        {
+          name: "Number Guessing Game",
+          description:
+            "A Python-based game where the user guesses a randomly generated number. Built with simplicity and fun in mind!",
+          link: "https://github.com/Amreshbofficial/Number-Guessing-Game-Python-Projects",
+        },
+        {
+          name: "HTML Login Page Project",
+          description:
+            "A responsive website built using HTML and CSS, showcasing modern web design principles and clean code structure.",
+          link: "https://github.com/Amreshbofficial/HTM-Project-1",
+        },
+        {
+          name: "Python AI Projects",
+          description:
+            "A collection of AI-based projects using Python, including machine learning models and data analysis tools.",
+          link: "https://github.com/Amreshbofficial/Python---Ai-Projects",
+        },
+        {
+          name: "Python Django Project: Pin Your Notes",
+          description:
+            "A full-stack web application built with Django for managing and organizing notes efficiently.",
+          link: "https://github.com/Amreshbofficial/Python-Django-Project-Pin-Your-Notes",
+        },
+        {
+          name: "Todo List App (React Mini Project)",
+          description:
+            "A React-based to-do list application with features like task creation, editing, and deletion.",
+          link: "https://github.com/Amreshbofficial/Todo-list-app-React-Mini-Project",
+        },
+        {
+          name: "Simple Calculator Python Project",
+          description:
+            "This is a simple calculator program written in Python that performs basic arithmetic operations: addition, subtraction, multiplication, and division.",
+          link: "https://github.com/Amreshbofficial/Simple-Calculator-Python-Project",
+        },
+        {
+          name: "Simple Alarm Clock",
+          description:
+            "A Python-based alarm clock application that allows users to set an alarm and plays a sound at the specified time.",
+          link: "https://github.com/Amreshbofficial/Simple-Alarm-Clock-Python-Project",
+        },
+      ];
+
+      // Sort projects alphabetically by name
+      projects.sort((a, b) => a.name.localeCompare(b.name));
+
+      // Function to render projects
+      function renderProjects() {
+        const container = document.getElementById("projects-container");
+        container.innerHTML = ""; // Clear existing content
+
+        projects.forEach((project) => {
+          const projectCard = `
+            <div class="project__card">
+              <h3>${project.name}</h3>
+              <p>${project.description}</p>
+              <a href="${project.link}" target="_blank">
+                View Project <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          `;
+          container.insertAdjacentHTML("beforeend", projectCard);
+        });
+      }
+
+      // Render projects on page load
+      document.addEventListener("DOMContentLoaded", renderProjects);
+    </script>
+  </body>
+</html>
