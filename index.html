@@ -6,13 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Best Meta Description -->
-    <meta name="description" content="Amresh B's GitHub Portfolio: Explore projects in cloud computing, AI, web development, and more. Discover scalable solutions, AWS expertise, and innovative designs.">
+    <meta name="description" content="Amresh B's GitHub Portfolio: Explore projects in cloud computing, AI, web development, and more. Discover scalable solutions, AWS expertise, and innovative designs." />
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <title>Amreshbofficial | GitHub Portfolio Page</title>
     <style>
@@ -80,7 +77,66 @@
         background: #0d1319; /* Dark background for the entire portfolio section */
         padding: 40px 0;
       }
+
+      /* Contact section */
+      .contact {
+        background: #f9f9f9;
+        padding: 40px 0;
+      }
+
+      .contact__container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .contact__details {
+        margin-bottom: 20px;
+      }
+
+      .contact__form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact__form input,
+      .contact__form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .contact__form button {
+        padding: 10px;
+        background-color: #55bad6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .contact__form button:hover {
+        background-color: #44a1c2;
+      }
+
+      .social__icons a {
+        margin: 0 5px;
+        color: #555;
+      }
+
+      .social__icons a:hover {
+        color: #000;
+      }
     </style>
+    <!-- Include EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS user ID
+      })();
+    </script>
   </head>
   <body>
     <header>
@@ -192,7 +248,7 @@
             </p>
             <p>Pearl Information Technology Pvt Ltd - (Startup)</p>
             <p>1/183, Valacherykkadu, Thiruchitrambalam East,</p>
-            <p> Pattukkottai Taluk, Thanjavur – 614628</p>
+            <p>Pattukkottai Taluk, Thanjavur – 614628</p>
           </div>
           <div class="social__icons">
             <a href="mailto:amreshbaskar@gmail.com" class="icon" target="_blank"><i class="ri-mail-line"></i></a>
@@ -201,17 +257,32 @@
             <a href="https://www.facebook.com/profile.php?id=61569988602117" class="icon" target="_blank"><i class="ri-facebook-fill"></i></a>
           </div>
         </div>
-        <form class="footer__form">
-          <input type="text" placeholder="Your Name" />
-          <input type="text" placeholder="Your Email Address" />
-          <input type="text" placeholder="Your Phone Number" />
-          <textarea cols="30" rows="10" placeholder="Your Idea"></textarea>
+        <form class="footer__form" id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email Address" required />
+          <input type="tel" name="phone" placeholder="Your Phone Number" required />
+          <textarea name="message" cols="30" rows="10" placeholder="Your Idea" required></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
       </div>
     </footer>
 
     <script>
+      // Initialize EmailJS
+      emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+
+      // Handle form submission
+      document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_93xdakp", "template_wgmeuag", this)
+          .then(function() {
+            alert("Message sent successfully!");
+          }, function(error) {
+            alert("Failed to send message. Please try again later.");
+          });
+      });
+
       // Array of projects (add new projects here)
       const projects = [
         {
