@@ -362,3 +362,35 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Animations for service cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service__card {
+  animation: fadeInUp 0.8s ease-in-out;
+  animation-fill-mode: both;
+}
+
+/* Delay animations for each service card */
+.service__card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.service__card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.service__card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+
