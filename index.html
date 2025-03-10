@@ -5,9 +5,7 @@
     <meta name="google-site-verification" content="googlebc21a09e7972c169" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Best Meta Description -->
     <meta name="description" content="Amresh B's GitHub Portfolio: Explore projects in cloud computing, AI, web development, and more. Discover scalable solutions, AWS expertise, and innovative designs.">
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
@@ -16,68 +14,56 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Amreshbofficial | GitHub Portfolio Page</title>
     <style>
-      /* Add this CSS to ensure left alignment of the paragraph */
       .header__container p {
-        text-align: left; /* Align text to the left */
-        max-width: 600px; /* Limit the width for better readability */
-        margin: 0; /* Remove default margin */
-        line-height: 1.6; /* Improve line spacing */
+        text-align: left;
+        max-width: 600px;
+        margin: 0;
+        line-height: 1.6;
       }
-
-      /* Additional styles for project cards */
       .project__grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
       }
-
       .project__card {
-        background: white; /* White background for project cards */
+        background: white;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        position: relative; /* Required for positioning the "View Project" link */
+        position: relative;
       }
-
       .project__card:hover {
         transform: translateY(-5px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
       }
-
       .project__card h3 {
         font-size: 1.5rem;
         margin-bottom: 10px;
-        color: #ff4e05; /* Orange color for project headings */
+        color: #ff4e05;
       }
-
       .project__card p {
         font-size: 1rem;
-        color: #555; /* Gray color for project descriptions */
-        margin-bottom: 40px; /* Add space below the description for the "View Project" link */
+        color: #555;
+        margin-bottom: 40px;
       }
-
       .project__card a {
-        color: #55bad6; /* Light blue color for "View Project" links */
+        color: #55bad6;
         text-decoration: none;
         display: flex;
         align-items: center;
-        position: absolute; /* Position the link absolutely within the card */
-        bottom: 20px; /* Position it at the bottom */
-        right: 20px; /* Position it at the right */
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
       }
-
       .project__card a:hover {
         text-decoration: underline;
       }
-
       .project__card i {
         margin-left: 5px;
       }
-
-      /* Portfolio section background */
       .project {
-        background: #0d1319; /* Dark background for the entire portfolio section */
+        background: #0d1319;
         padding: 40px 0;
       }
     </style>
@@ -86,12 +72,10 @@
     <header>
       <div class="section__container header__container">
         <p><span>Hello</span> I'm</p>
-        <br />
         <h1>Amresh B</h1>
         <h2 class="section__title" style="font-size: 1.5em">
           Developer | Cloud Enthusiast | Blogger | <span>Designer.</span>
         </h2>
-        <br />
         <p>
           I’m a skilled professional with expertise in website creation, design,
           and cloud computing. I specialize in building secure, scalable
@@ -100,10 +84,8 @@
           SEO optimization. Explore my projects and contributions, and feel free
           to reach out—let’s collaborate and create something amazing!
         </p>
-        <br />
         <div class="action__btns">
           <a href="https://wa.me/918072799323" class="btn" target="_blank">Say Hello</a>
-          <!-- Removed the "Watch My Video" button and icon -->
         </div>
       </div>
     </header>
@@ -121,7 +103,6 @@
             scalable, secure systems. Let’s innovate and create something amazing
             together!
           </p>
-          <!-- Removed the "More About" button -->
         </div>
       </div>
     </section>
@@ -140,7 +121,6 @@
               intuitive navigation, I ensure your website not only looks great but
               also delivers an exceptional user experience.
             </p>
-            <!-- Removed the "Read more..." button -->
           </div>
           <div class="service__card">
             <i class="ri-code-s-slash-line"></i>
@@ -152,7 +132,6 @@
               deliver robust solutions that perform seamlessly across all
               devices.
             </p>
-            <!-- Removed the "Read more..." button -->
           </div>
           <div class="service__card">
             <i class="ri-cloud-line"></i>
@@ -163,7 +142,6 @@
               and I work closely with clients to ensure their cloud
               infrastructure meets their business needs and expectations.
             </p>
-            <!-- Removed the "Read more..." button -->
           </div>
         </div>
       </div>
@@ -174,7 +152,6 @@
         <p class="section__subtitle">Portfolio</p>
         <h2 class="section__title"><span>Latest</span> Project</h2>
         <div id="projects-container" class="project__grid">
-          <!-- Projects will be dynamically inserted here -->
         </div>
       </div>
     </section>
@@ -201,18 +178,17 @@
             <a href="https://www.facebook.com/profile.php?id=61569988602117" class="icon" target="_blank"><i class="ri-facebook-fill"></i></a>
           </div>
         </div>
-        <form class="footer__form">
-          <input type="text" placeholder="Your Name" />
-          <input type="text" placeholder="Your Email Address" />
-          <input type="text" placeholder="Your Phone Number" />
-          <textarea cols="30" rows="10" placeholder="Your Idea"></textarea>
+        <form class="footer__form" method="POST" action="send_email.php">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email Address" required />
+          <input type="tel" name="phone" placeholder="Your Phone Number" />
+          <textarea name="message" cols="30" rows="10" placeholder="Your Idea" required></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
       </div>
     </footer>
 
     <script>
-      // Array of projects (add new projects here)
       const projects = [
         {
           name: "Appointment System Project",
@@ -263,15 +239,10 @@
           link: "https://github.com/Amreshbofficial/Simple-Alarm-Clock-Python-Project",
         },
       ];
-
-      // Sort projects alphabetically by name
       projects.sort((a, b) => a.name.localeCompare(b.name));
-
-      // Function to render projects
       function renderProjects() {
         const container = document.getElementById("projects-container");
-        container.innerHTML = ""; // Clear existing content
-
+        container.innerHTML = "";
         projects.forEach((project) => {
           const projectCard = `
             <div class="project__card">
@@ -285,8 +256,6 @@
           container.insertAdjacentHTML("beforeend", projectCard);
         });
       }
-
-      // Render projects on page load
       document.addEventListener("DOMContentLoaded", renderProjects);
     </script>
   </body>
