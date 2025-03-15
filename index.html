@@ -5,26 +5,19 @@
     <meta name="google-site-verification" content="googlebc21a09e7972c169" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Best Meta Description -->
     <meta name="description" content="Amresh B's GitHub Portfolio: Explore projects in cloud computing, AI, web development, and more. Discover scalable solutions, AWS expertise, and innovative designs.">
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <title>Amreshbofficial | GitHub Portfolio Page</title>
     <style>
-      /* Add this CSS to ensure left alignment of the paragraph */
       .header__container p {
-        text-align: left; /* Align text to the left */
-        max-width: 600px; /* Limit the width for better readability */
-        margin: 0; /* Remove default margin */
-        line-height: 1.6; /* Improve line spacing */
+        text-align: left;
+        max-width: 600px;
+        margin: 0;
+        line-height: 1.6;
       }
 
-      /* Additional styles for project cards */
       .project__grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -32,12 +25,12 @@
       }
 
       .project__card {
-        background: white; /* White background for project cards */
+        background: white;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        position: relative; /* Required for positioning the "View Project" link */
+        position: relative;
       }
 
       .project__card:hover {
@@ -48,23 +41,23 @@
       .project__card h3 {
         font-size: 1.5rem;
         margin-bottom: 10px;
-        color: #ff4e05; /* Orange color for project headings */
+        color: #ff4e05;
       }
 
       .project__card p {
         font-size: 1rem;
-        color: #555; /* Gray color for project descriptions */
-        margin-bottom: 40px; /* Add space below the description for the "View Project" link */
+        color: #555;
+        margin-bottom: 40px;
       }
 
       .project__card a {
-        color: #55bad6; /* Light blue color for "View Project" links */
+        color: #55bad6;
         text-decoration: none;
         display: flex;
         align-items: center;
-        position: absolute; /* Position the link absolutely within the card */
-        bottom: 20px; /* Position it at the bottom */
-        right: 20px; /* Position it at the right */
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
       }
 
       .project__card a:hover {
@@ -75,9 +68,8 @@
         margin-left: 5px;
       }
 
-      /* Portfolio section background */
       .project {
-        background: #0d1319; /* Dark background for the entire portfolio section */
+        background: #0d1319;
         padding: 40px 0;
       }
     </style>
@@ -103,7 +95,6 @@
         <br />
         <div class="action__btns">
           <a href="https://wa.me/918072799323" class="btn" target="_blank">Say Hello on WhatsApp</a>
-          <!-- Removed the "Watch My Video" button and icon -->
         </div>
       </div>
     </header>
@@ -121,7 +112,6 @@
             scalable, secure systems. Let’s innovate and create something amazing
             together!
           </p>
-          <!-- Removed the "More About" button -->
         </div>
       </div>
     </section>
@@ -140,7 +130,6 @@
               intuitive navigation, I ensure your website not only looks great but
               also delivers an exceptional user experience.
             </p>
-            <!-- Removed the "Read more..." button -->
           </div>
           <div class="service__card">
             <i class="ri-code-s-slash-line"></i>
@@ -152,7 +141,6 @@
               deliver robust solutions that perform seamlessly across all
               devices.
             </p>
-            <!-- Removed the "Read more..." button -->
           </div>
           <div class="service__card">
             <i class="ri-cloud-line"></i>
@@ -163,7 +151,6 @@
               and I work closely with clients to ensure their cloud
               infrastructure meets their business needs and expectations.
             </p>
-            <!-- Removed the "Read more..." button -->
           </div>
         </div>
       </div>
@@ -198,46 +185,32 @@
             <a href="https://www.facebook.com/profile.php?id=61569988602117" class="icon" target="_blank"><i class="ri-facebook-fill"></i></a>
           </div>
         </div>
-        <!-- Web3Forms Form -->
         <form action="https://api.web3forms.com/submit" method="POST" class="footer__form">
-          <!-- Replace with your Access Key -->
           <input type="hidden" name="access_key" value="a3954f14-ada0-4c86-93d8-e96b3f183e11">
-
-          <!-- Form Inputs. Each input must have a name="" attribute -->
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email Address" required>
           <textarea name="message" placeholder="Your Idea" required></textarea>
-
-          <!-- Honeypot Spam Protection -->
           <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-          <!-- Custom Confirmation / Success Page -->
-          <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-
           <button type="submit" class="btn">Send Message</button>
         </form>
       </div>
     </footer>
 
     <script>
-      // Array of projects (add new projects here)
       const projects = [
         {
           name: "Appointment System Project",
-          description:
-            "A Django-based appointment scheduling system designed to streamline booking and management processes.",
+          description: "A Django-based appointment scheduling system designed to streamline booking and management processes.",
           link: "https://github.com/Amreshbofficial/Appointment_System_Project",
         },
         {
           name: "Number Guessing Game",
-          description:
-            "A Python-based game where the user guesses a randomly generated number. Built with simplicity and fun in mind!",
+          description: "A Python-based game where the user guesses a randomly generated number. Built with simplicity and fun in mind!",
           link: "https://github.com/Amreshbofficial/Number-Guessing-Game-Python-Projects",
         },
         {
           name: "HTML Login Page Project",
-          description:
-            "A responsive website built using HTML and CSS, showcasing modern web design principles and clean code structure.",
+          description: "A responsive website built using HTML and CSS, showcasing modern web design principles and clean code structure.",
           link: "https://github.com/Amreshbofficial/HTM-Project-1",
         },
         {
@@ -247,42 +220,36 @@
         },
         {
           name: "Python Django Project: Pin Your Notes",
-          description:
-            "A full-stack web application built with Django for managing and organizing notes efficiently.",
+          description: "A full-stack web application built with Django for managing and organizing notes efficiently.",
           link: "https://github.com/Amreshbofficial/Python-Django-Project-Pin-Your-Notes",
         },
         {
           name: "Todo List App (React Mini Project)",
-          description:
-            "A React-based to-do list application with features like task creation, editing, and deletion.",
+          description: "A React-based to-do list application with features like task creation, editing, and deletion.",
           link: "https://github.com/Amreshbofficial/Todo-list-app-React-Mini-Project",
         },
         {
-    name: "Portfolio-Website-Project-0.1",
-    description: "This project is a web application that showcases my skills and projects as a Full-Stack Developer. It includes features like project showcases, skill descriptions, and contact information. This is not my personal profile but a project I built to demonstrate my abilities.",
-    link: "https://github.com/Amreshbofficial/Portfolio-Website-Project-0.1",
-        }
+          name: "Portfolio-Website-Project-0.1",
+          description: "This project is a web application that showcases my skills and projects as a Full-Stack Developer. It includes features like project showcases, skill descriptions, and contact information. This is not my personal profile but a project I built to demonstrate my abilities.",
+          link: "https://github.com/Amreshbofficial/Portfolio-Website-Project-0.1",
+        },
         {
           name: "Simple Calculator Python Project",
-          description:
-            "This is a simple calculator program written in Python that performs basic arithmetic operations: addition, subtraction, multiplication, and division.",
+          description: "This is a simple calculator program written in Python that performs basic arithmetic operations: addition, subtraction, multiplication, and division.",
           link: "https://github.com/Amreshbofficial/Simple-Calculator-Python-Project",
         },
         {
           name: "Simple Alarm Clock",
-          description:
-            "A Python-based alarm clock application that allows users to set an alarm and plays a sound at the specified time.",
+          description: "A Python-based alarm clock application that allows users to set an alarm and plays a sound at the specified time.",
           link: "https://github.com/Amreshbofficial/Simple-Alarm-Clock-Python-Project",
         },
       ];
 
-      // Sort projects alphabetically by name
       projects.sort((a, b) => a.name.localeCompare(b.name));
 
-      // Function to render projects
       function renderProjects() {
         const container = document.getElementById("projects-container");
-        container.innerHTML = ""; // Clear existing content
+        container.innerHTML = "";
 
         projects.forEach((project) => {
           const projectCard = `
@@ -298,7 +265,6 @@
         });
       }
 
-      // Render projects on page load
       document.addEventListener("DOMContentLoaded", renderProjects);
     </script>
   </body>
