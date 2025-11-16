@@ -46,7 +46,8 @@ h1, h2, h3, h4, h5, h6 {
 .section-title {
     font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 3rem;
+    /* FIX: Increased margin-bottom from 3rem to 4rem for more space below the heading */
+    margin-bottom: 4rem; 
     position: relative;
 }
 
@@ -304,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
     min-width: 300px; /* Ensure it has space on desktop */
 }
 
-/* FIX: SIMPLIFY AND CENTRALISE PROFILE IMAGE STYLING FOR RESPONSIVENESS */
+/* Base Profile Image Styling (Desktop) */
 .profile-circle {
     width: 400px; /* Base desktop size */
     height: 400px;
@@ -316,7 +317,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Center on smaller screens when in column layout */
+    margin: 0 auto;
 }
 
 .profile-circle .profile-image {
@@ -324,14 +325,13 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     object-fit: cover;
     
-    /* FIX: Simpler positioning/scaling */
     position: absolute; 
     left: 0;
     top: 0;
-    transform: scale(1.4) translateY(15%); /* Keep original zoom but use relative Y positioning */
+    /* Base offset for the cropped image */
+    transform: scale(1.4) translateY(15%); 
     transition: 0.3s ease;
 }
-/* END FIX */
 
 .image-placeholder {
     width: 300px;
@@ -683,7 +683,7 @@ h1, h2, h3, h4, h5, h6 {
     /* TABLET/SMALL LAPTOP ADJUSTMENTS */
 
     .hero-animation {
-        display: none; /* FIX: Hide animation on tablets to save vertical space */
+        display: none; /* Hide animation on tablets to save vertical space */
     }
     
     .hero .container {
@@ -699,11 +699,17 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
     }
     
-    /* FIX: Adjust profile circle size for tablets */
+    /* Adjust profile circle size for tablets */
     .profile-circle {
         width: 300px; 
         height: 300px; 
         margin-bottom: 30px;
+    }
+    
+    /* FIX: Adjust image alignment within the circle for tablets */
+    .profile-circle .profile-image {
+        /* Keep scale(1.4) from base style, adjust vertical position */
+        transform: scale(1.4) translateY(10%); 
     }
     
     .contact-content {
@@ -755,13 +761,19 @@ h1, h2, h3, h4, h5, h6 {
 
     .section-title {
         font-size: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
     }
 
-    /* FIX: Adjust profile circle size for mobile devices */
+    /* Adjust profile circle size for mobile devices */
     .profile-circle {
         width: 250px; 
         height: 250px; 
+    }
+    
+    /* FIX: Adjust image alignment within the circle for mobile */
+    .profile-circle .profile-image {
+        /* Keep scale(1.4) from base style, adjust vertical position further */
+        transform: scale(1.4) translateY(5%); 
     }
     
     .projects-grid {
