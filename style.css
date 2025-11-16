@@ -301,12 +301,12 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
     display: flex;
     justify-content: center;
+    min-width: 300px; /* Ensure it has space on desktop */
 }
 
-
-/* MODIFIED STYLE FOR PROFILE IMAGE (400px) */
+/* FIX: SIMPLIFY AND CENTRALISE PROFILE IMAGE STYLING FOR RESPONSIVENESS */
 .profile-circle {
-    width: 400px;
+    width: 400px; /* Base desktop size */
     height: 400px;
     border-radius: 50%;
     border: 5px solid var(--primary-color);
@@ -316,23 +316,22 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto; /* Center on smaller screens when in column layout */
 }
 
-/* ONLY INNER IMAGE CAN MOVE */
 .profile-circle .profile-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    position: absolute;
-    left: 0px;
-    top: 60px;
-
+    
+    /* FIX: Simpler positioning/scaling */
+    position: absolute; 
+    left: 0;
+    top: 0;
+    transform: scale(1.4) translateY(15%); /* Keep original zoom but use relative Y positioning */
     transition: 0.3s ease;
-
-    transform: scale(1.4); /* zoom-in */
-    /* transform: scale(0.9);  zoom-out */
 }
+/* END FIX */
 
 .image-placeholder {
     width: 300px;
@@ -681,6 +680,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
+    /* TABLET/SMALL LAPTOP ADJUSTMENTS */
+
+    .hero-animation {
+        display: none; /* FIX: Hide animation on tablets to save vertical space */
+    }
+    
     .hero .container {
         flex-direction: column;
         text-align: center;
@@ -694,18 +699,26 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
     }
     
+    /* FIX: Adjust profile circle size for tablets */
+    .profile-circle {
+        width: 300px; 
+        height: 300px; 
+        margin-bottom: 30px;
+    }
+    
     .contact-content {
         flex-direction: column;
     }
 
-    /* Adjust larger image size for tablets/small laptops */
-    .about-image .profile-image {
-        width: 350px; 
-        height: 350px; 
+    .projects-grid {
+        /* Allow smaller cards for two columns on tablet */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
+    /* MOBILE ADJUSTMENTS */
+
     .hamburger {
         display: flex;
     }
@@ -733,14 +746,26 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .section-title {
         font-size: 2rem;
     }
     
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* FIX: Adjust profile circle size for mobile devices */
+    .profile-circle {
+        width: 250px; 
+        height: 250px; 
+    }
+    
     .projects-grid {
+        /* Force single column on smaller mobile screens */
         grid-template-columns: 1fr;
     }
     
@@ -754,17 +779,16 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 250px;
         margin-bottom: 10px;
     }
-
-    /* Adjust image size for mobile devices */
-    .about-image .profile-image {
-        width: 250px; 
-        height: 250px; 
+    
+    .contact-item {
+        align-items: flex-start; /* Better alignment for stacked content */
     }
 }
 
 @media (max-width: 576px) {
+    /* SMALL PHONE ADJUSTMENTS */
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .skills-grid {
