@@ -11,7 +11,7 @@ const Footer = () => {
                             { icon: 'fab fa-github', label: 'GitHub', href: 'https://github.com/Amreshbofficial' },
                             { icon: 'fab fa-linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/amresh-baskar-546456221/' },
                             { icon: 'fab fa-instagram', label: 'Instagram', href: 'https://www.instagram.com/amresh_b_/' },
-                            { icon: 'fab fa-twitter', label: 'Twitter', href: '#' },
+                            { icon: 'fas fa-xmark', label: 'X', href: '#' },
                             { icon: 'fab fa-youtube', label: 'YouTube', href: '#' }
                         ]} />
                     </div>

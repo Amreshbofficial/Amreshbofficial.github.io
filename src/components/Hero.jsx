@@ -29,7 +29,7 @@ const Hero = () => {
                     />
                     <div className="hero-buttons">
                         <SpotlightButton href="#contact" className="btn-primary">Hire Me</SpotlightButton>
-                        <SpotlightButton href="resume.html" target="_blank" className="btn-secondary">View Resume</SpotlightButton>
+                        <SpotlightButton href="legacy/resume.html" target="_blank" className="btn-secondary">View Resume</SpotlightButton>
                     </div>
                 </div>
                 <div className="hero-animation">
