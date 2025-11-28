@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Lightning from './Lightning';
+import Hyperspeed, { hyperspeedPresets } from './Hyperspeed';
 import ShinyText from './ShinyText';
 import BlurText from './BlurText';
 import SpotlightButton from './SpotlightButton';
@@ -17,7 +17,7 @@ const Hero = () => {
     return (
         <section id="home" className="hero" style={{ position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
-                <Lightning hue={220} speed={1} intensity={1} size={1} />
+                <Hyperspeed effectOptions={hyperspeedPresets.one} />
             </div>
             <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                 <div className="hero-content">
