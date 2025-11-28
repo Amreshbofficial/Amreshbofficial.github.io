@@ -1,0 +1,120 @@
+.dock-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.dock {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dock-item {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: bottom center;
+}
+
+.dock-item:hover {
+    width: 70px;
+    height: 70px;
+    margin: 0 10px;
+    background: var(--primary-color);
+    box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.5);
+    z-index: 2;
+}
+
+/* Siblings effect (simplified without JS math for performance) */
+.dock-item:hover+.dock-item,
+.dock-item:has(+ .dock-item:hover) {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+}
+
+.dock-icon {
+    font-size: 1.5rem;
+    transition: font-size 0.2s ease;
+}
+
+.dock-item:hover .dock-icon {
+    font-size: 2rem;
+}
+
+.dock-tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    pointer-events: none;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .dock {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .dock-item {
+        width: 40px;
+        height: 40px;
+    }
+
+    .dock-item:hover {
+        width: 55px;
+        height: 55px;
+        margin: 0 5px;
+    }
+
+    .dock-item:hover+.dock-item,
+    .dock-item:has(+ .dock-item:hover) {
+        width: 48px;
+        height: 48px;
+        margin: 0 3px;
+    }
+
+    .dock-icon {
+        font-size: 1.2rem;
+    }
+
+    .dock-item:hover .dock-icon {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,59 @@
+.pixel-card {
+    position: relative;
+    background: #1a1a1a;
+    border: 2px solid #333;
+    padding: 2px;
+    transition: transform 0.2s ease;
+    overflow: hidden;
+}
+
+.pixel-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0px var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.pixel-content {
+    background: #111;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pixel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 4px 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.pixel-overlay.active {
+    opacity: 1;
+}
+
+/* Variant colors */
+.pixel-card.blue:hover {
+    box-shadow: 4px 4px 0px #4FACFE;
+    border-color: #4FACFE;
+}
+
+.pixel-card.green:hover {
+    box-shadow: 4px 4px 0px #25D366;
+    border-color: #25D366;
+}
+
+.pixel-card.red:hover {
+    box-shadow: 4px 4px 0px #FF6B6B;
+    border-color: #FF6B6B;
+}

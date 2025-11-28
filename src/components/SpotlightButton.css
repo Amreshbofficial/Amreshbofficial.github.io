@@ -1,0 +1,72 @@
+.spotlight-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.spotlight-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.spotlight-button:active {
+    transform: translateY(0);
+}
+
+.spotlight-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--x) var(--y),
+            rgba(255, 255, 255, 0.15) 0%,
+            transparent 50%);
+    opacity: var(--opacity);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.spotlight-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Primary variant */
+.spotlight-button.btn-primary {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.spotlight-button.btn-primary .spotlight-bg {
+    background: radial-gradient(circle at var(--x) var(--y),
+            rgba(102, 126, 234, 0.4) 0%,
+            transparent 60%);
+}
+
+/* Secondary variant */
+.spotlight-button.btn-secondary {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.spotlight-button.btn-secondary .spotlight-bg {
+    background: radial-gradient(circle at var(--x) var(--y),
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 50%);
+}

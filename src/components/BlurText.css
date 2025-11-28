@@ -1,0 +1,12 @@
+.blur-text {
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+
+.blur-text.visible {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+}
