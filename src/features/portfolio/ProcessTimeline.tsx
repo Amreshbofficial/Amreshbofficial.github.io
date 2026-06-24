@@ -105,6 +105,22 @@ export const ProcessTimeline = () => {
           background: rgba(88, 166, 255, 0.1);
           transform: scale(1.1);
         }
+        
+        .process-content {
+          max-width: 280px;
+          position: relative;
+          z-index: 1;
+        }
+
+        /* Mobile specific adjustments to hide line behind text */
+        @media (max-width: 768px) {
+          .process-content {
+            background-color: var(--color-bg-base);
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-top: -8px; /* Pull up slightly to cover the line nicely */
+          }
+        }
       `}} />
 
       <motion.div 
@@ -137,7 +153,7 @@ export const ProcessTimeline = () => {
               {item.step}
             </div>
             
-            <div style={{ maxWidth: '280px' }}>
+            <div className="process-content">
               <h3 className="card-title" style={{ fontSize: '20px', marginBottom: '8px' }}>
                 {item.title}
               </h3>

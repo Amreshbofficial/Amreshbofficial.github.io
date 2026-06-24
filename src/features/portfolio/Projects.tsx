@@ -87,8 +87,8 @@ export const Projects = () => {
           </div>
         </div>
         
-        {/* Navigation Buttons for manual swiping */}
-        <div style={{ display: 'flex', gap: '12px' }}>
+        {/* Navigation Buttons for manual swiping (Hidden on mobile) */}
+        <div className="hidden-mobile" style={{ display: 'flex', gap: '12px' }}>
           <button 
             onClick={() => scroll('left')}
             className="nav-btn"
@@ -132,11 +132,17 @@ export const Projects = () => {
           scroll-snap-align: start;
         }
         @media (max-width: 768px) {
-          .project-slide {
-            flex: 0 0 90%;
-          }
           .projects-slider {
-            gap: 16px;
+            flex-direction: column;
+            overflow-x: visible;
+            scroll-snap-type: none;
+            padding-right: 0;
+            padding-bottom: 0;
+            gap: 24px;
+          }
+          .project-slide {
+            flex: 1 1 auto;
+            width: 100%;
           }
         }
         .nav-btn {

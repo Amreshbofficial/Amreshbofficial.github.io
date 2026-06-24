@@ -26,11 +26,11 @@ export const HeroSection = () => {
           Founder @ Pearl Cloud Solutions
         </motion.div>
 
-        <motion.h1 variants={itemVariants} style={{ fontSize: '72px', fontWeight: 600, lineHeight: 1.05, letterSpacing: '-0.05em', margin: 0 }}>
+        <motion.h1 variants={itemVariants} className="hero-title" style={{ fontSize: '72px', fontWeight: 600, lineHeight: 1.05, letterSpacing: '-0.05em', margin: 0 }}>
           Amresh Baskar
         </motion.h1>
         
-        <motion.p variants={itemVariants} className="text-muted" style={{ fontSize: '20px', lineHeight: 1.6, maxWidth: '600px', margin: '16px auto', fontWeight: 400 }}>
+        <motion.p variants={itemVariants} className="text-muted hero-subtitle" style={{ fontSize: '20px', lineHeight: 1.6, maxWidth: '600px', margin: '16px auto', fontWeight: 400 }}>
           Building SaaS Products, Web Applications, Cloud Solutions & Business Automation to help startups transform ideas into scalable digital products.
         </motion.p>
         
@@ -41,7 +41,7 @@ export const HeroSection = () => {
         
         <motion.div variants={itemVariants} style={{ marginTop: '32px', borderTop: '1px solid var(--color-border)', paddingTop: '24px', width: '100%' }}>
           <p className="text-muted" style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '24px', fontWeight: 600 }}>Core Expertise</p>
-          <div className="flex justify-center gap-8" style={{ flexWrap: 'wrap', color: 'var(--color-text-secondary)', fontSize: '14px', fontWeight: 500 }}>
+          <div className="flex justify-center gap-8 core-expertise" style={{ flexWrap: 'wrap', color: 'var(--color-text-secondary)', fontSize: '14px', fontWeight: 500 }}>
             <span>Full Stack Developer</span>
             <span>SaaS Builder</span>
             <span>AWS Cloud Solutions</span>
