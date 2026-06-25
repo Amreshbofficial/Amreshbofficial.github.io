@@ -12,7 +12,7 @@ const categories = [
         <line x1="12" y1="17" x2="12" y2="21"></line>
       </svg>
     ),
-    skills: ['React.js', 'Tailwind CSS', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap']
+    skills: ['React.js', 'Angular', 'Tailwind CSS', 'JavaScript', 'HTML5', 'CSS3']
   },
   {
     title: 'Backend',
@@ -24,7 +24,7 @@ const categories = [
         <line x1="6" y1="18" x2="6.01" y2="18"></line>
       </svg>
     ),
-    skills: ['Node.js', 'Express.js', 'Python', 'FastAPI']
+    skills: ['Node.js', 'Express.js', 'PHP', 'Python', 'FastAPI']
   },
   {
     title: 'Database',
@@ -38,14 +38,14 @@ const categories = [
     skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis']
   },
   {
-    title: 'Mobile & APIs',
+    title: 'Mobile & Desktop',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
         <line x1="12" y1="18" x2="12.01" y2="18"></line>
       </svg>
     ),
-    skills: ['Flutter', 'RESTful APIs', 'GraphQL']
+    skills: ['Flutter', 'Electron.js', 'Software EXE', 'REST APIs']
   },
   {
     title: 'Tools & Cloud',

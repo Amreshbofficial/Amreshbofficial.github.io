@@ -6,6 +6,21 @@ import { motion } from 'framer-motion';
 export const AboutSection = () => {
   return (
     <Section id="about">
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 768px) {
+          .about-heading {
+            text-align: center !important;
+          }
+          .about-text {
+            text-align: center !important;
+          }
+        }
+        @media (min-width: 769px) {
+          .about-heading {
+            text-align: left !important;
+          }
+        }
+      `}} />
       <div className="grid grid-cols-2 gap-12" style={{ alignItems: 'center' }}>
         
         {/* About Info */}
@@ -16,10 +31,10 @@ export const AboutSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex flex-col gap-6"
         >
-          <h2 className="section-title" style={{ margin: 0, textAlign: 'left' }}>About Me</h2>
-          <div className="flex flex-col gap-4">
+          <h2 className="section-title about-heading" style={{ margin: 0 }}>About Me</h2>
+          <div className="flex flex-col gap-4 about-text">
             <p className="card-body" style={{ color: 'var(--color-text-primary)' }}>
-              I am Amresh Baskar, a Full-Stack Engineer and the founder of Pearl Cloud Solutions based in Thanjavur, Tamil Nadu.
+              I am Amresh Baskar, a Full-Stack Engineer, the Founder & CEO of Pearl Cloud Solutions, and a Partner at TechCart Enterprise.
             </p>
             <p className="card-body">
               I specialize in building end-to-end SaaS platforms, high-performance web applications, and robust cloud infrastructure. My focus is on writing clean, maintainable code and architecting systems that solve real business problems at scale.
