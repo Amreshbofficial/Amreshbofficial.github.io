@@ -37,7 +37,7 @@ const projects = [
     title: 'Flysol Technologies',
     description: "Built a modern corporate platform for a forward-thinking technology partner. Engineered a scalable React frontend with dynamic Tailwind CSS and integrated a custom admin panel to manage enterprise services and AI-powered optimizations.",
     tags: ['React', 'Tailwind CSS', 'JavaScript', 'Custom Admin'],
-    link: '/flysol-img/',
+    link: 'https://www.flysol.in/',
     gradient: 'linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(0, 0, 0, 0) 100%)',
     icon: (
       <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.2 }}>
