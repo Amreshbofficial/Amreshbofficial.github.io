@@ -34,6 +34,20 @@ const projects = [
     )
   },
   {
+    title: 'Arifa Innovation & Incubation Council (AIIC)',
+    description: 'Developed a comprehensive incubation and innovation portal. Engineered a high-performance frontend using React and Vite, coupled with a robust custom backend and admin panel using PHP and MySQL to manage incubation programs, startups, and council activities.',
+    collaboration: 'Full-Stack Web Application',
+    tags: ['React', 'Vite', 'PHP', 'MySQL', 'Custom Admin'],
+    link: 'https://aiic.co.in/',
+    gradient: 'linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(0, 0, 0, 0) 100%)',
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.2 }}>
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+      </svg>
+    )
+  },
+  {
     title: 'Flysol Technologies',
     description: "Built a modern corporate platform for a forward-thinking technology partner. Engineered a scalable React frontend with dynamic Tailwind CSS and integrated a custom admin panel to manage enterprise services and AI-powered optimizations.",
     tags: ['React', 'Tailwind CSS', 'JavaScript', 'Custom Admin'],
