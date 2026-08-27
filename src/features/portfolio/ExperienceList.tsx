@@ -8,10 +8,10 @@ const experiences = [
     company: 'Founder, Pearl Cloud Solutions (Home-based)',
     period: '2026 – Present',
     responsibilities: [
-      'Building SaaS products',
-      'Developing cloud-based solutions',
-      'Delivering web and mobile applications',
-      'Providing business automation services'
+      'Delivered 10+ custom web applications and SaaS products for clients',
+      'Built and maintained 15+ RESTful API endpoints using React.js and Node.js',
+      'Managed application deployment and cloud hosting using Git, GitHub, and AWS',
+      'Designed and developed scalable SaaS applications end-to-end'
     ]
   },
   {

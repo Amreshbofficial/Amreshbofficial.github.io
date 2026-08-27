@@ -171,7 +171,7 @@ export const Projects = () => {
         <div className="projects-badges" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', flex: '0 1 auto' }}>
            <span className="text-muted" style={{ fontWeight: 500, fontSize: '15px' }}>SaaS & Enterprise</span>
            <span className="badge" style={{ backgroundColor: 'rgba(88, 166, 255, 0.1)', color: 'var(--color-primary)', border: '1px solid rgba(88, 166, 255, 0.2)', padding: '4px 12px' }}>
-             {projects.length} Total Projects
+             3 Total Projects
            </span>
         </div>
         

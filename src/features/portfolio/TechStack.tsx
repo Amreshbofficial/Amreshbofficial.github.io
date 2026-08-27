@@ -66,7 +66,7 @@ const categories = [
         <circle cx="11" cy="11" r="2"></circle>
       </svg>
     ),
-    skills: ['Figma', 'UI/UX Principles', 'Agile/Scrum', 'Problem Solving']
+    skills: ['UI/UX Principles', 'Problem Solving']
   }
 ];
 
