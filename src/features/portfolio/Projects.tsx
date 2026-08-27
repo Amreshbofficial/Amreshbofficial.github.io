@@ -19,6 +19,21 @@ const projects = [
     )
   },
   {
+    title: 'Local Search - Hyperlocal Discovery & Mobility Platform',
+    description: 'Engineered a scalable, production-grade hyperlocal discovery and on-demand mobility platform. Built a cross-platform Flutter mobile app with real-time LiveKit WebRTC audio/video calling and CallKit native VoIP integration. Architected a Node.js/Express backend with Prisma ORM, Socket.io driver dispatch, and a Next.js admin dashboard for operational zones and business analytics.',
+    collaboration: 'Full-Stack SaaS & Mobile App',
+    tags: ['Flutter', 'Node.js', 'LiveKit (WebRTC)', 'Next.js', 'Prisma ORM', 'Socket.io', 'Tailwind CSS'],
+    link: '#',
+    github: 'https://github.com/Amreshbofficial',
+    gradient: 'linear-gradient(135deg, rgba(79, 70, 229, 0.2) 0%, rgba(0, 0, 0, 0) 100%)',
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.2 }}>
+        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+      </svg>
+    )
+  },
+  {
     title: 'Flysol Technologies',
     description: "Built a modern corporate platform for a forward-thinking technology partner. Engineered a scalable React frontend with dynamic Tailwind CSS and integrated a custom admin panel to manage enterprise services and AI-powered optimizations.",
     tags: ['React', 'Tailwind CSS', 'JavaScript', 'Custom Admin'],
