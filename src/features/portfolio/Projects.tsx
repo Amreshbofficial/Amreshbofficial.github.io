@@ -19,8 +19,8 @@ const projects = [
     )
   },
   {
-    title: 'Local Search - Hyperlocal Discovery & Mobility Platform',
-    description: 'Engineered a scalable, production-grade hyperlocal discovery and on-demand mobility platform. Built a cross-platform Flutter mobile app with real-time LiveKit WebRTC audio/video calling and CallKit native VoIP integration. Architected a Node.js/Express backend with Prisma ORM, Socket.io driver dispatch, and a Next.js admin dashboard for operational zones and business analytics.',
+    title: 'Local Search - Mobility Platform',
+    description: 'Hyperlocal discovery and mobility platform with a Flutter mobile app, real-time LiveKit WebRTC calling, and a Node.js backend for driver dispatch and business analytics.',
     collaboration: 'Full-Stack SaaS & Mobile App',
     tags: ['Flutter', 'Node.js', 'LiveKit (WebRTC)', 'Next.js', 'Prisma ORM', 'Socket.io', 'Tailwind CSS'],
     link: '#',
@@ -186,7 +186,7 @@ export const Projects = () => {
         <div className="projects-badges" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', flex: '0 1 auto' }}>
            <span className="text-muted" style={{ fontWeight: 500, fontSize: '15px' }}>SaaS & Enterprise</span>
            <span className="badge" style={{ backgroundColor: 'rgba(88, 166, 255, 0.1)', color: 'var(--color-primary)', border: '1px solid rgba(88, 166, 255, 0.2)', padding: '4px 12px' }}>
-             3 Total Projects
+             4 Total Projects
            </span>
         </div>
         
