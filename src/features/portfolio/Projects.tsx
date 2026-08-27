@@ -23,7 +23,7 @@ const projects = [
     description: 'Hyperlocal discovery and mobility platform with a Flutter mobile app, real-time LiveKit WebRTC calling, and a Node.js backend for driver dispatch and business analytics.',
     collaboration: 'Full-Stack SaaS & Mobile App',
     tags: ['Flutter', 'Node.js', 'LiveKit (WebRTC)', 'Next.js', 'Prisma ORM', 'Socket.io', 'Tailwind CSS'],
-    link: '#',
+    link: '/local-search-img/',
     github: 'https://github.com/Amreshbofficial',
     gradient: 'linear-gradient(135deg, rgba(79, 70, 229, 0.2) 0%, rgba(0, 0, 0, 0) 100%)',
     icon: (
